@@ -1,0 +1,1 @@
+server=localhost;port=3306;username=root;database=hotel;password=1234

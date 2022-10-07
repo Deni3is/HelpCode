@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33198022-BC62-431C-B9A3-9C03D7EEE8B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Const\Const.cs" />
+    <Compile Include="Const\IspolzData.cs" />
+    <Compile Include="Dobavlenie\DataObs.cs" />
+    <Compile Include="Dobavlenie\FormDobavlenieObs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dobavlenie\FormDobavlenieObs.Designer.cs">
+      <DependentUpon>FormDobavlenieObs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menuchki\FormPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menuchki\FormPass.Designer.cs">
+      <DependentUpon>FormPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Work_Dock\dat.cs" />
+    <Compile Include="Forms\FromPC\Findpeople.cs" />
+    <Compile Include="Work_Dock\datedate.cs" />
+    <Compile Include="Work_Dock\otchet.cs" />
+    <Compile Include="Incriment\Class1.cs" />
+    <Compile Include="Work_Dock\Word_Helper.cs" />
+    <Compile Include="Work_Dock\FormDocum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Work_Dock\FormDocum.Designer.cs">
+      <DependentUpon>FormDocum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FromPC\FormPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FromPC\FormPC.Designer.cs">
+      <DependentUpon>FormPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAmbul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAmbul.Designer.cs">
+      <DependentUpon>FormAmbul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormObsledovanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormObsledovanie.Designer.cs">
+      <DependentUpon>FormObsledovanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FromPC\FormPCObs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FromPC\FormPCObs.Designer.cs">
+      <DependentUpon>FormPCObs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menuchki\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menuchki\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dobavlenie\FormDobavlenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dobavlenie\FormDobavlenie.Designer.cs">
+      <DependentUpon>FormDobavlenie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FromPC\FormPCAmb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FromPC\FormPCAmb.Designer.cs">
+      <DependentUpon>FormPCAmb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dobavlenie\Init.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dobavlenie\FormDobavlenieObs.resx">
+      <DependentUpon>FormDobavlenieObs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menuchki\FormPass.resx">
+      <DependentUpon>FormPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work_Dock\FormDocum.resx">
+      <DependentUpon>FormDocum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAmbul.resx">
+      <DependentUpon>FormAmbul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormObsledovanie.resx">
+      <DependentUpon>FormObsledovanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FromPC\FormPC.resx">
+      <DependentUpon>FormPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FromPC\FormPCObs.resx">
+      <DependentUpon>FormPCObs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menuchki\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dobavlenie\FormDobavlenie.resx">
+      <DependentUpon>FormDobavlenie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FromPC\FormPCAmb.resx">
+      <DependentUpon>FormPCAmb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Картинки\крест.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Картинки\назад.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
